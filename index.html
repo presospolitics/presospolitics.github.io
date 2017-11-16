@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Escriu a un pres polític català</h1>
+          <p>
+            Mig govern de la Generalitat és a presó. Hi són per defensar
+            fins les darreres conseqüències el teu dret de votar el futur del
+            teu país.
+            En estar privats de llibertat, els presos sofreixen sentiments
+            d'aïllament, soledat, i pèrdua.
+          </p>
+
+          <p>
+            Qualsevol de nosaltres pot pot ajudar els presos a
+            sentir-se més acompanyats escrivint-los cartes.
+          </p>
+
+          <p>
+            Aquesta pàgina selecciona aleatòriament un dels presos polítics
+            i te'n proporciona els detalls per a que li escriguis una carta.
+            O, millor encara, una carta cada setmana!
+            <br>
+            <br>
+          </p>
+
+          <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button" onclick="tria(); return false;">Tria un pres &raquo;</a>
+            &nbsp;
+            &nbsp;
+            <a class="btn btn-secondary btn-lg" href="http://ullsvermells.com" role="button">Comenta l'actualitat política a ullsvermells.com &raquo;</a>
+          </p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="container invisible prisonerContainer">
+        <div class="row">
+          <div class="col-md-4 col-lg-3">
+            <div class="card" style="width: 100%;">
+              <img class="card-img-top prisonerImage" src="" alt="Card image cap">
+
+              <div class="card-body">
+                <h4 class="card-title prisonerName"></h4>
+                <p class="card-text prisonerDescription"></p>
+              </div>
+
+            </div>
+          </div> <!-- /col -->
+
+          <div class="col-md-8 col-lg-9">
+            <h2><span class="prisonerName"></span></h2>
+            <p>D'entre tots els presos polítics, hem triat per a tu
+              <span class="prisonerName"></span>, <span class="prisonerDescription"></span>,
+              <span class="prisonerGenedredPrisoner"></span> a
+              <span class="prisonerPrisonShortname"></span>.
+            <p>
+              Pots escriure <span class="prisonerName"></span> a la següent adreça:
+            </p>
+            <p>
+              <strong><span class="prisonerAddress"></span></strong>
+            </p>
+            <p>
+              Recorda que:
+
+              <ul>
+                <li>És obligatori posar el remitent a la carta, és a dir, el
+                    teu nom i la teva adreça. Si no, la carta no s'entrega.
+                </li>
+                <li>Cal posar-hi segells per valor de 50 cèntims.
+                </li>
+              </ul>
+            </p>
+          </div> <!-- /col -->
+        </div> <!-- /row -->
+      </div> <!-- /container -->
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <footer class="container">
+      <p>&copy; Russian Hackers 2017</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.7.1/sha256.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.41/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+    <script src="presos.js"></script>
+  </body>
+</html>
