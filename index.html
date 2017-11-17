@@ -41,7 +41,7 @@
           </p>
 
           <p>
-            <a class="btn btn-primary btn-lg btn-padded d-inline-block" href="#" role="button" onclick="tria(); return false;">Tria un pres &raquo;</a>
+            <a class="btn btn-primary btn-lg btn-padded d-inline-block" href="#" role="button" id="btn-choose">Tria un pres &raquo;</a>
             <a class="btn btn-secondary btn-lg btn-padded d-none d-sm-inline-block" href="http://ullsvermells.com" role="button">Comenta l'actualitat política a ullsvermells.com &raquo;</a>
             <a class="btn btn-secondary btn-sm btn-padded d-inline-block d-sm-none" href="http://ullsvermells.com" role="button">Comenta a ullsvermells.com &raquo;</a>
           </p>
@@ -98,7 +98,7 @@
       <p>&copy; "Russian" Hackers 2017</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.7.1/sha256.min.js"></script>
@@ -112,6 +112,25 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-109836213-1');
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $('#btn-choose').on('click',function (e) {
+          e.preventDefault()
+
+          tria()
+
+          var target = '.prisonerContainer'
+          $target = $(target)
+          $('html, body').stop().animate({
+            'scrollTop':  $target.offset().top
+            }, 900, 'swing', function () {
+              window.location.hash = target
+            }
+          )
+        })
+      });
     </script>
   </body>
 </html>
